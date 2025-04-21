@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbers Victory</title>
+  <link rel="icon" href="img/imgBpng.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: "fadeIn 1s ease-in-out",
+            fadeSlide: "fadeSlide 0.8s ease-in-out forwards"
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            fadeSlide: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+   
+  </style>
+</head>
+
+<body class="bg-black text-white">
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="px-6 py-4 bg-black animate-fadeSlide">
+    <div class="flex flex-col items-center justify-center">
+      <div class="mb-4">
+        <img src="img/LogoPreta-removebg-preview.png" alt="Victory Barbers Logo" class="h-50 w-auto" />
+      </div>
+      <div class="text-center">
+        <h1 class="text-5xl font-bold">Victory Barbers</h1>
+        <p class="text-gray-400 text-sm">Experiência. Compromisso. Valor.</p>
+        <button id="saibaMaisBtn" class="btn">
+          Saiba mais
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Oculto -->
+  <div id="conteudo" class="hidden">
+    <!-- Sobre Nós -->
+    <section id="sobre-nos" class="px-6 py-8 animate-fadeSlide">
+      <h2 class="text-3xl font-semibold mb-4">Sobre Nós</h2>
+      <div class="mb-4 flex justify-center">
+        <img src="img/teste.jpg" alt="Imagem representativa da loja" class="w-1/2 h-auto object-cover border-4 border-gray-300 rounded-lg shadow-lg" />
+      </div>
+      <div class="max-w-2xl mx-auto">
+        <p class="text-gray-400 mb-2 text-left md:mb-4">
+          Na Barbers Victory, unimos estilo, atitude e excelência. Somos mais que uma loja,
+        </p>
+        <p class="text-gray-400 mb-2 text-left md:mb-4">
+          somos uma experiência voltada para quem valoriza autenticidade e qualidade.
+        </p>
+        <p class="text-gray-400 mb-2 text-left md:mb-4">
+          Nossa missão é oferecer produtos que traduzem confiança e personalidade,
+        </p>
+        <p class="text-gray-400 mb-2 text-left md:mb-4">
+          sempre com um atendimento próximo e diferenciado. Seja bem-vindo à Victory.
+        </p>
+        <p class="text-gray-400 text-left">
+          Aqui, cada detalhe importa.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Produtos -->
+    <section class="px-6 py-8 animate-fadeSlide">
+      <h2 class="text-2xl font-semibold mb-4">Nossos Produtos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="produtos-grid">
+        <!-- Produto 1 -->
+        <a href="file:///Users/priscilafasales/Desktop/flex2.0/ProdutoMasculino/index.html" target="_blank"
+          class="block bg-gray-800 rounded-lg overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 animate-fadeSlide">
+          <img src="img/FrenteBranco.png" alt="Roupa masculina"
+            class="w-full h-auto object-cover aspect-[4/3] transition duration-300 hover:scale-105 hover:shadow-xl" />
+          <div class="p-4">
+            <p class="font-semibold text-white">Roupa masculina</p>
+            <p class="text-gray-400">R$75</p>
+          </div>
+        </a>
+
+        <!-- Produto 2 -->
+        <a href="file:///Users/priscilafasales/Desktop/flex2.0/produto1/index.html" target="_blank"
+          class="block bg-gray-800 rounded-lg overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 animate-fadeSlide">
+          <img src="img/MulherCmPretoFrente.png" alt="Roupa feminina"
+            class="w-full h-auto object-cover aspect-[4/3] transition duration-300 hover:scale-105 hover:shadow-xl" />
+          <div class="p-4">
+            <p class="font-semibold text-white">Roupa feminina</p>
+            <p class="text-gray-400">R$75</p>
+          </div>
+        </a>
+
+        <!-- Produto 3 -->
+        <a href="file:///Users/priscilafasales/Desktop/flex2.0/produto1/index.html" target="_blank"
+          class="block bg-gray-800 rounded-lg overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 animate-fadeSlide">
+          <img src="img/base.jpeg" alt="New Collection"
+          class="w-full h-auto object-cover aspect-[4/3] transition duration-300 hover:scale-105 hover:shadow-xl" />
+        <div class="p-4">
+          <p class="font-semibold text-white">New Collection</p>
+          <p class="text-gray-400">R$150</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="px-6 py-8 text-center animate-fadeSlide">
+    <h2 class="text-2xl font-semibold mb-4">Contato</h2>
+    <a href="https://wa.me/5599999999999?text=Quero%20fazer%20um%20agendamento%20com%20a%20Victory%20Barbers!" target="_blank"
+      class="inline-block bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
+      Fale no WhatsApp
+    </a>
+  </section>
+
+  <footer class="px-6 py-8 border-t border-gray-800 text-sm text-gray-400 animate-fadeSlide">
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
+      <div class="flex gap-4 text-white text-xl">
+        <a href="https://www.instagram.com/vbarbers_?igsh=djdvenFtbDZ0YWNh" aria-label="Instagram">
+          <img src="img/WhatsApp Image 2025-04-18 at 20.49.26.jpeg" alt="Instagram" class="h-12 w-12" />
+        </a>
+      </div>
+
+      <div class="flex gap-4 text-white text-xl">
+        <a href="https://www.instagram.com/vbarbers_?igsh=djdvenFtbDZ0YWNh" aria-label="Instagram">
+          <img src="img/WhatsApp Image 2025-04-18 at 20.49.26.jpeg" alt="Instagram" class="h-12 w-12" />
+        </a>
+      </div>
+
+
+      <div class="flex flex-col sm:flex-row gap-2">
+        <a href="#" class="block">Início</a>
+        <a href="#" class="block">Produtos</a>
+        <a href="#" class="block">Contato</a>
+      </div>
+
+      <div>
+        <p>Email: contato@victorybarbers.com</p>
+        <p>Horário: Seg-Sex 9h-18h | Sáb 9h-15h</p>
+      </div>
+
+      <div>© 2025 Victory Barbers</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Adiciona um evento de clique ao botão "Saiba mais"
+  document.getElementById('saibaMaisBtn').addEventListener('click', function() {
+    const conteudo = document.getElementById('conteudo');
+    const loader = document.getElementById('loader');
+    loader.style.display = 'block'; // Exibe o loader
+    conteudo.classList.remove('hidden'); // Remove a classe 'hidden'
+    conteudo.classList.add('animate-fadeSlide'); // Adiciona a animação
+    conteudo.scrollIntoView({ behavior: 'smooth' }); // Rola suavemente para a seção
+    setTimeout(() => {
+      loader.style.display = 'none'; // Oculta o loader após 2 segundos
+    }, 2000); // Ajuste o tempo conforme necessário
+  });
+
+  // Adiciona evento de clique para os produtos
+  const produtos = document.querySelectorAll('#produtos-grid a');
+  produtos.forEach(produto => {
+    produto.addEventListener('click', function() {
+      const loader = document.getElementById('loader');
+      loader.style.display = 'block'; // Exibe o loader
+      setTimeout(() => {
+        window.location.href = this.href; // Redireciona após 2 segundos
+      }, 2000); // Ajuste o tempo conforme necessário
+    });
+  });
+</script>
+</body>
+
+</html>
